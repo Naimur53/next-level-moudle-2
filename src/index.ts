@@ -10,7 +10,28 @@ function kgToGram(value: KgType): KgType {
 }
 const my = kgToGram(1000) as number
 // as number will be sure then you can put
+console.log('hi', my)
 
 
+type User = {
+    name: string,
+    age: number,
+}
 
-console.log('hi')
+interface IUser {
+    name: string,
+    age: number,
+}
+
+interface IAdmin extends IUser {
+    role: "admin" | null,
+
+}
+
+const data: IAdmin = {
+    name: 'asdi',
+    age: 3,
+    role: 'admin'
+}
+
+
